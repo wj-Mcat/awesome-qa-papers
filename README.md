@@ -5,8 +5,7 @@
 > cited  analysis is a copy from google scholar at 2019.11.16
 
 - 2019
-- [XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/abs/1906.08237) 160
-  - 
+    - [XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/abs/1906.08237) 160
 - 2018
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805) 2457
 - 2017
