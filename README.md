@@ -3,8 +3,13 @@
 > [question-answer-progress](http://nlpprogress.com/english/question_answering.html#)
 >
 > 论文引用次数统计来自谷歌学术,  2019.11.16
+>
+> 后期我会按子领域进行细化分，并写出论文笔记
+
 
 - 2019
+  - [Transferable Multi-Domain State Generator for Task-Oriented Dialogue Systems](https://arxiv.org/abs/1905.08743) 9
+  - [Language Models Are Unsupervised Multitask Learners](https://www.techbooky.com/wp-content/uploads/2019/02/Better-Language-Models-and-Their-Implications.pdf) 181 
   - [Multi-style Generative Reading Comprehension](https://arxiv.org/abs/1901.02262) 3
   - [RoBERTa: A Robustly Optimized BERT Pretraining Approach](https://arxiv.org/abs/1907.11692) 42
   - [TANDA: Transfer and Adapt Pre-Trained Transformer Models for Answer Sentence Selection](https://arxiv.org/abs/1911.04118)
@@ -12,6 +17,7 @@
   - [Dual co-matching network for multi-choice reading comprehension](https://arxiv.org/abs/1901.09381) 13
   - [XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/abs/1906.08237) 160
 - 2018
+  - [Ordered Neurons: Integrating Tree Structures into Recurrent Neural Networks]()
   - [Modeling Semantics with Gated Graph Neural Networks for Knowledge Base Question Answering](https://arxiv.org/abs/1808.04126) 10
   - [Hyperbolic Representation Learning for Fast and Efficient Neural Question Answering](https://dl.acm.org/citation.cfm?id=3159664) 35
   - [Deep contextualized word representations](https://arxiv.org/abs/1802.05365) 1812 
