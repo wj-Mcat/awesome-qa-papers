@@ -68,7 +68,7 @@
 
 * Yoon Kim, et al.: Character-Aware Neural Language Models, 2015.
 
-##  分词/词性标注/词性分析
+## 分词/词性标注/词性分析
 
 * Donald Hindle and Mats Rooth. Structural Ambiguity and Lexical Relations, Computational Linguistics, 1993.
 
@@ -140,11 +140,23 @@
 
 * Ashish Vaswani, et al.: Attention Is All You Need, 2017.
 
-## Coreference Resolution
+## 命名实体识别
 
-* Vincent Ng: Supervised Noun Phrase Coreference Research: The First Fifteen Years, ACL 2010.
+* Guillaume Lample, et al.: Neural Architectures for Named Entity Recognition, ACL 2016.
 
-* Kenton Lee at al.: End-to-end Neural Coreference Resolution, EMNLP 2017.
+* Xuezhe Ma, Eduard Hovy: End-to-end Sequence Labeling via Bi-directional LSTM-CNNs-CRF, ACL 2016.
+
+* Matthew Peters, et al.: Semi-Supervised Sequence Tagging With Bidirectional Language Models, ACL 2017.
+
+* Kevin Clark, et al.: Semi-Supervised Sequence Modeling with Cross-View Training, EMNLP 2018.
+
+* Matthew Peters, et al.: Deep Contextualized Word Representations, NAACL 2018.
+
+* Abbas Ghaddar and Philippe Lannglais: Robust Lexical Features for Improved Neural Network Named-Entity Recognition, COLING 2018.
+
+* Alan Akbik, et al: Contextual String Embeddings for Sequence Labeling, ACL 2018.
+
+* Alexei Baevski, et al.: Cloze-driven Pretraining of Self-attention Networks, 2019.
 
 ## 自动摘要
 
@@ -157,6 +169,29 @@
 * Wen-tau Yih et al.: Multi-Document Summarization by Maximizing Informative Content-Words. IJCAI 2007.
 
 * Alexander M Rush, et al.: A Neural Attention Model for Sentence Summarization. EMNLP 2015.
+
+## 文本分类
+
+* Yoon Kim, et al.: Convolutional Neural Networks for Sentence Classification, EMNLP 2014.
+
+
+* Xiang Zhang, et al.: Character-Level Convolutional Networks For Text Classification, NIPS 2015.
+
+* Yoon Kim, et al.: Character-Aware Neural Language Models, AAAI 2016.
+
+* Zichao Yang, et al.: Hierarchical Attention Networks for Document Classification, NAACL 2016.
+
+* Alon Jacovi, et al.: Understanding Convolutional Neural Networks for Text Classification, EMNLP 2018.
+
+## 文本生成
+
+* Lantao Yu, et al.: SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient, AAAI 2017.
+
+* William Fedus, et al.: MaskGAN: Better Text Generation via Filling in the______, ICLR 2018. [ArXiv]
+
+* Yaushian Wang and Hung-Yi Lee: Learning to Encode Text as Human-Readable Summaries using Generative Adversarial Networks, EMNLP 2018. [ACL Anthology]
+
+* Christos Baziotis, et al.: SEQ^3: Differentiable Sequence-to-Sequence-to-Sequence Autoencoder for Unsupervised Abstractive Sentence Compression, NAACL 2019.
 
 ## QA和机器阅读理解
 
