@@ -60,6 +60,8 @@
   - [Neural Conversation Model](https://arxiv.org/abs/1603.06155) 407
   - [Generating Factoid Questions With Recurrent Neural Networks: The 30M Factoid Question-Answer Corpus](https://arxiv.org/abs/1603.06807) 125
 - 2015
+  
+  - [Srivastava, Rupesh Kumar, Klaus Greff, and Jürgen Schmidhuber. "Highway networks." arXiv preprint arXiv:1505.00387 (2015).](https://arxiv.org/abs/1505.00387)
   - [Teaching Machines to Read and Comprehend](http://papers.nips.cc/paper/5945-teaching-machines-to-read-and-comprehend) 1158
   - ✨ 🔥 [Memory Networks]( https://arxiv.org/abs/1410.3916v11 ) --- cited by **959** 
   - ✨ 🔥 [End-To-End Memory Networks]( https://arxiv.org/abs/1503.08895 ) --- cited by **1267** 
@@ -69,6 +71,7 @@
   - [Applying Deep Learning to answer selection: A study and an open task](https://ieeexplore.ieee.org/abstract/document/7404872/) 216
   - [Gated Graph Sequence Neural Networks](https://arxiv.org/abs/1511.05493) 647
 - earlier
+  - [Kim, Yoon. "Convolutional neural networks for sentence classification." arXiv preprint arXiv:1408.5882 (2014).](https://arxiv.org/abs/1408.5882)
   - [Open Question Answering with Weakly Supervised Embedding Models](https://link.springer.com/chapter/10.1007/978-3-662-44848-9_11) 203
   - [ Question Answering with Subgraph Embeddings ](https://arxiv.org/abs/1406.3676) 382
   - [The Value of Semantic Parse Labeling for Knowledge Base Question Answering](https://www.aclweb.org/anthology/P16-2033) 70
