@@ -1,27 +1,28 @@
 # Abstract
 
-- 将Attention运用在MC（Machine-Comprehension）上面，已取得一定的效果
-- 论文中的模型在SQuAD和CNN/DailyMail数据上都取得当时最好的效果
+- 将Attention运用在MC（Machine-Comprehension）上面，已取得显著的效果。
+- 论文中的模型在SQuAD和CNN/DailyMail数据上都取得`stat-of-the-art`的效果。
 
 # Introduction
 
-- 机器翻译和QA在自然语言处理和机器视觉领域都收到一些关注和应用
-- `end-to-end`系统大部分达到了预期效果，其中一个关键点就是使用了`神经注意力机制`，使得在在查找答案时，能够将注意力放在指定的一些地方
+- 机器翻译和QA在自然语言处理和机器视觉领域都都受到很多关注，并延伸的有很多模型。
+
+- `end-to-end`系统大部分达到了预期效果，其中一个关键点就是使用了`神经注意力机制`，使得在在查找答案时，能够将注意力放在最相关的一些信息点，从而更有效的提取信息。
 - 注意力机制一般有如下特征：
-  - 计算注意力机制的权重，其中一个用途在于将一段文本编码到一个固定长度的向量，然后使用注意力机制能够有效的提取与其最相关的信息，并做对应的回答
-  - 对于文本领域，注意力机制是动态的：根据不同的文本有不同的注意上下文权重
-  - 通常是单向的，温恩提一般涉及到上下文语段或者图像
-- 这篇论文主要介绍`BIDAF`（Bi-Diectional Attention Flow）网络，这是一个层级多状态架构的多层次多粒度的文本表示建模方法
-  - BiDAF模型包括，character-level,word-level以及上下文Embedding这些层级的语义表示建模层次。
+  - 计算注意力机制的权重，其中一个用途在于将一段文本编码到一个固定长度的向量，然后使用注意力机制能够有效的提取与其最相关的信息。
+  - 对于文本领域，注意力机制是动态的：根据不同的文本有不同的注意上下文权重。
+  - 通常是单向的，一般涉及到上下文语段或者图像。
+- 这篇论文主要介绍`BIDAF`（`Bi-Diectional Attention Flow`）网络，这是一个层级架构的多层次多粒度的文本表示建模方法
+  - `BiDAF`模型包括，`character-level`,`word-level`以及`contextual Embedding`这些层级的语义表示建模层次。
   - 使用双向注意力及注意流去获取与查询相关的上下文表示
 - 与之前流行的基于注意力机制对话模式的模型来说，BiDAF模型具有以下提升点：
-  - 首先我们的模型并不是将一段文本编码成一个固定长度的上下文词向量
-  - Attention权重在每一层都进行提取关键信息，这样上一层通过注意力机制筛选过的数据流向下一层继续做注意力提取，这样貌似听起来还不错，可这样会导致信息的流失，所以此模型将通过Attention提取后的信息和原信息一起流向下一层，这样能够保证信息的完整性，以供后续模型层做数据处理。
-  - 其次，使用一个低存储的注意力机制，通过迭代计算注意机制，使Attention机制专注于计算Query与Context之间的关系，最终能够生成根据问题找答案的一个注意力提取参数权重。
+  - 首先我们的模型**并不是**将一段文本编码成一个**固定长度**的上下文词向量
+  - `Attention`权重在每一层都进行提取关键信息，这样上一层通过注意力机制筛选过的数据流向下一层继续做注意力提取，这样貌似听起来还不错，可这样会导致信息的流失，所以此模型将通过Attention提取后的信息和原信息一起流向下一层，这样能够保证信息的完整性，以供后续模型层做数据处理和信息提取。
+  - 其次，使用一个低存储的注意力机制，通过迭代计算注意机制，使`Attention`机制专注于计算`Query`与`Context`之间的关系，最终能够生成根据问题找答案的一个注意力提取参数权重。
   - 实验结果证明，低存储的注意力机制相对于动态注意力机制有一个很明显的优势和性能提升。
-  - 最后，使用注意力机制在双向BiLSTM，Query-to-Context，Context-to-Query，能够充分提取相关信息。
+  - 最后，使用注意力机制在双向`BiLSTM`，`Query-to-Context`，`Context-to-Query`，能够充分提取相关信息。
 
-- 此论文模型一经发布，立刻刷榜斯坦福问答数据（SQuAD)。修改输出层后，BiDAF模型在CNN/DailyMail数据集上也取得了最好的结果。
+- 此论文模型一经发布，立刻刷榜斯坦福问答数据（`SQuAD`)。修改输出层后，`BiDAF`模型在`CNN/DailyMail`数据集上也取得了最好的结果。
 
 # 模型
 
@@ -30,8 +31,8 @@
 - **Character Embedding Layer**：使用`Character-Lvel CNNs`模型将每一个单词映射成一个向量
 - **Word Embedding Layer**：使用预训练词向量
 - **Contextual Embedding Layer**：上下文相关词向量
-- **Attention Flow Layer**：通过将Query和上下文词向量做注意力机制，从而针对文本中每个单词生成具有query感知性的词向量。
-- **Modeling Layer**：应用一个LSTM网络来提取上下文中的信息
+- **Attention Flow Layer**：通过将`Query`和上下文词向量做注意力机制，从而针对文本中每个单词生成具有`query`感知性的词向量。
+- **Modeling Layer**：应用一个`LSTM`网络来提取上下文中的信息
 - **Output Layer**：用于一个生成回答的模型层
 ![BiDAF-structure](./imgs/BIDAF.png)
 上图中的输入输出最好是配合着颜色来查看
@@ -48,8 +49,8 @@
 
 `Character Embedding` 和 `Word Embedding` 需要进行拼接，然后送入到一个两层[`Highway Network`](https://arxiv.org/abs/1505.00387)，输出是两个`d`维度的序列向量。分别为
 
-- H-context：${ X \in R^{d \times T}}$
-- U-query ：${X \in R^{d \times J}}$
+- `H-context`：${ X \in R^{d \times T}}$
+- `U-query` ：${X \in R^{d \times J}}$
 
 ## Contextual Embedding Layer
 
